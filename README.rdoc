@@ -1,8 +1,8 @@
 == README
 
-*Frameworks used*
+<b>Frameworks used</b>
 - Rails
 - Angular
 
-*Database*
+<b>Database</b>
 - Postgres
