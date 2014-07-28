@@ -1,4 +1,6 @@
-<h1 class="text-center">{{ data.messageId  }} -  {{ data.messageData.messages[data.messageId].title }}</h1>
 <div class="row">
+	<h1>{{ data.messageData.messages[data.messageId].title }}</h1>
+	
+	<h4>Author: {{ data.messageData.messages[data.messageId].author }} | Time: {{ data.messageData.messages[data.messageId].message_date }} </h4>
     <p>{{ data.messageData.messages[data.messageId].contents }}</p>
 </div>

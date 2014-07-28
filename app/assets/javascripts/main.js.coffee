@@ -14,9 +14,16 @@ ResistanceJohn = angular.module('ResistanceJohn', ['ngRoute'])
 # Sets up routing
 ResistanceJohn.config(['$routeProvider', ($routeProvider) ->
   # Route for '/message'
-  $routeProvider.when('/message/:messageId', { templateUrl: '../assets/mainMessage.html', controller: 'MessageCtrl' } )
+  $routeProvider
+  	.when('/message/new', { templateUrl: '../assets/mainCreateMessage.html', controller: 'CreateMessageCtrl' } )
+  	.when('/message/:messageId', { templateUrl: '../assets/mainMessage.html', controller: 'MessageCtrl' } )
 
   # Default
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl' } )
 
+])
+
+# CSRF Token fix
+ResistanceJohn.config(["$httpProvider", (provider) ->
+  provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ])
