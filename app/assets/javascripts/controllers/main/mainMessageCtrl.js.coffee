@@ -1,7 +1,7 @@
 @MessageCtrl = ($scope, $routeParams, messageData) ->
 
   $scope.data =
-    message: messageData.data.messages[0]
+    messageData: messageData.data
 
   messageData.loadMessages()
 
