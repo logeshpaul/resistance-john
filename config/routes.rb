@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  get 'main/index'
+ResistanceJohn::Application.routes.draw do
+  root to: 'main#index'
+
+  resources :messages
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
