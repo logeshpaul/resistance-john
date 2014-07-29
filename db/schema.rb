@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140728175342) do
   enable_extension "plpgsql"
 
   create_table "messages", force: true do |t|
-    t.string   "title"
+    t.string   "author_name"
     t.text     "contents"
     t.string   "author"
     t.datetime "message_date"

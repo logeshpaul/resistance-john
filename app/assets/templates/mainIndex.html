@@ -1,12 +1,24 @@
-<a ng-click="navNewMessage()" class="btn btn-info">New Message</a>
-
 <div class="page-header">
-  <h1>Resistance <small>Broadcast</small></h1>
+  <h1>Broadcast <a ng-click="navNewMessage()" class="btn btn-info pull-right">New Message</a></h1>
+  
 </div>
 
-<h1></h1>
-<div class="row" ng-repeat="message in data.messages">
-    <h2><a ng-click="viewMessage($index)">{{ message.title }}</a></h2>
-    <p>Author: {{ message.author }} | Time: {{ message.message_date }} </p>
-    <p>{{ message.contents }}</p>
-</div>
+<ul class="row media-list" ng-repeat="message in data.messages">
+	<li class="media">
+		<a class="pull-left" href="#">
+		  <img class="media-object" alt="64x64" src="https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg" style="width: 64px; height: 64px;">
+		</a>
+		<div class="media-body">
+		  <div class="author">
+		  <h4 class="media-heading"><a ng-click="viewMessage($index)">{{ message.author_name }}</a></h4>
+		  <small>Time: {{ message.created_at }}</small>
+		  </div>
+		  <div class="message-content">{{ message.contents }}</div>
+
+		  <div class="action-bar">
+		  	<a href="">Comment</a>
+		  	<a href="">Save</a>
+		  </div>
+		</div>
+	</li>
+</ul>

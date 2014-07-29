@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
 
 	    # Create and save new message from data received from the client
 	    new_message = Message.new
-	    new_message.title = params[:new_message][:title][0...250] # Get only first 250 characters
+	    new_message.author_name = params[:new_message][:author_name][0...250] # Get only first 250 characters
 	    new_message.contents = params[:new_message][:contents]
 
 	    # Confirm message is valid and save or return HTTP error

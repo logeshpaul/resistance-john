@@ -1,6 +1,19 @@
-<div class="row">
-	<h1>{{ data.messageData.messages[data.messageId].title }}</h1>
-	
-	<h4>Author: {{ data.messageData.messages[data.messageId].author }} | Time: {{ data.messageData.messages[data.messageId].message_date }} </h4>
-    <p>{{ data.messageData.messages[data.messageId].contents }}</p>
-</div>
+<ul class="row media-list">
+	<li class="media">
+		<a class="pull-left" href="#">
+		  <img class="media-object" alt="64x64" src="https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg" style="width: 64px; height: 64px;">
+		</a>
+		<div class="media-body">
+		  <div class="author">
+		  <h4 class="media-heading"><a ng-click="viewMessage($index)">{{ data.messageData.messages[data.messageId].author_name }}</a></h4>
+		  <small>Time: {{ data.messageData.messages[data.messageId].created_at }}</small>
+		  </div>
+		  <div class="message-content">{{ data.messageData.messages[data.messageId].contents }}</div>
+
+		  <div class="action-bar">
+		  	<a href="">Comment</a>
+		  	<a href="">Save</a>
+		  </div>
+		</div>
+	</li>
+</ul>

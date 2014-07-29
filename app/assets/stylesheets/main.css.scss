@@ -1,39 +1,23 @@
-// Place all the styles related to the Main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-/*
- * Base structure
- */
-
+/* Base structure */
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
 }
 
 
-/*
- * Global add-ons
- */
+/* Global add-ons */
 
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
+/* Top navigation - Hide default border to remove 1px line. */
 .navbar-fixed-top {
   border: 0;
 }
 
-/*
- * Sidebar
- */
-
+/* Sidebar */
 /* Hide for mobile, show later */
 .sidebar {
   display: none;
@@ -72,10 +56,7 @@ body {
 }
 
 
-/*
- * Main content
- */
-
+/* Main content */
 .main {
   padding: 20px;
 }
@@ -90,21 +71,22 @@ body {
 }
 
 
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+/* Message Styles */
+.media-heading a {
+  cursor: pointer;
 }
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
+.media {
+  padding: 10px 10px 5px 10px;
+  border: 1px solid #e3e3e3;
   margin-bottom: 20px;
 }
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+.message-content {
+  padding: 5px 0 20px 0;
+}
+.action-bar {
+  text-align: right;
+    a {
+      margin: 0 10px;
+      font-size: 12px;
+    }
 }

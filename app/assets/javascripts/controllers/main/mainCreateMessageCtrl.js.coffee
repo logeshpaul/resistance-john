@@ -4,7 +4,7 @@
   messageData.loadMessages()
 
   $scope.formData =
-    newMessageTitle: ''
+    newMessageAuthorName: ''
     newMessageContents: ''
 
   $scope.navNewMessage = ->
@@ -15,9 +15,10 @@
 
   $scope.createMessage = ->
     messageData.createMessage($scope.formData)
+    $location.url('/')
 
   $scope.clearMessage = ->
-    $scope.formData.newMessageTitle = ''
+    $scope.formData.newMessageAuthorName = ''
     $scope.formData.newMessageContents = ''
 
 # @CreateMessageCtrl.$inject = ['$scope', '$location', 'messageData']

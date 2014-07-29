@@ -2,7 +2,7 @@ angular.module('ResistanceJohn').factory('messageData', ['$http', ($http) ->
 
   messageData =
     data:
-      messages: [{title: 'Loading', contents: ''}]
+      messages: [{author_name: 'Loading', contents: ''}]
     isLoaded: false
 
   messageData.loadMessages = ->
@@ -17,14 +17,14 @@ angular.module('ResistanceJohn').factory('messageData', ['$http', ($http) ->
 
   messageData.createMessage = (newMessage) ->
     # Client-side data validation
-    if newMessage.newMessageTitle == '' or newMessage.newMessageContents == ''
-      alert('Neither the Title nor the Body are allowed to be left blank.')
+    if newMessage.newMessageAuthorName == '' or newMessage.newMessageContents == ''
+      alert('Neither the Author name nor the Content are allowed to be left blank.')
       return false
 
     # Create data object to POST
     data =
       new_message:
-        title: newMessage.newMessageTitle
+        author_name: newMessage.newMessageAuthorName
         contents: newMessage.newMessageContents
 
     # Do POST request to /messages.json
